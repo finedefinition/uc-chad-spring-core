@@ -13,9 +13,13 @@
           class="configurespring_container.xml_configuration_file.HappyFortuneServiceImpl"
           ></bean>
     <bean id="myCoach"
-          class="configurespring_container.xml_configuration_file.BaseballCoach">
+          class="configurespring_container.xml_configuration_file.TrackCoach">
     <!-- set up constructor injection -->
         <constructor-arg ref="myFortune" />
+    </bean>
+    <bean id="myCricketCoach" class="configurespring_container.xml_configuration_file.CricketCoach">
+        <!-- set up setter injection -->
+        <property name="fortuneService" ref="myFortune" />
     </bean>
     
 </beans>
