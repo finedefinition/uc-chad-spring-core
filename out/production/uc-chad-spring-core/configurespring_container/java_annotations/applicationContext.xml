@@ -6,17 +6,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+   <!-- add entry to component scanning-->
+    <context:component-scan base-package="configurespring_container.java_annotations" />
 
-    <!-- Define your beans here -->
-    <!--- define the dependency-->
-    <bean id="myFortune"
-          class="configurespring_container.xml_configuration_file.HappyFortuneServiceImpl"
-    ></bean>
-    <bean id="Coach"
-          class="configurespring_container.xml_configuration_file.TrackCoach">
-        <!-- set up constructor injection -->
-        <constructor-arg ref="myFortune"/>
-    </bean>
 </beans>
 
 
